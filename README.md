@@ -13,3 +13,4 @@ bash ./models/download-ggml-model.sh base.en
 ```
 make
 ```
+![alt text](![alt text](image.jpg))

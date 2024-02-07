@@ -13,4 +13,4 @@ bash ./models/download-ggml-model.sh base.en
 ```
 make
 ```
-![alt text](![alt text](image.jpg))
+![alt text](https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/make.png?raw=true)https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/make.png?raw=true)

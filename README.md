@@ -32,11 +32,28 @@ cmake -GNinja -Bbuild -DCMAKE_BUILD_TYPE=Release \
   -DWASMEDGE_PLUGIN_WASI_NN_GGML_LLAMA_BLAS=OFF \
   .
 ```
-
+![alt text](https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/Build%20and%20install%20WasmEdge-1.png?raw=true)
 ```
 cmake --build build
 ```
-
+![alt text](https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/Build%20and%20install%20WasmEdge-2.png?raw=true)
 ```
 sudo cmake --install build
 ```
+![alt text](https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/Build%20and%20install%20WasmEdge-3.png?raw=true)
+2-Prepare WASM application
+```
+cd llama
+cargo build --target wasm32-wasi --release
+```
+3-Output WASM file
+```
+cp target/wasm32-wasi/release/wasmedge-ggml-llama.wasm ./wasmedge-ggml-llama.wasm
+```
+4-Execute the WASM with the wasmedge
+```
+wasmedge --dir .:. \                                                             
+  --nn-preload default:GGML:AUTO:llama-2-7b-chat.Q5_K_M.gguf \
+llama/wasmedge-ggml-llama.wasm default
+```
+5-Test

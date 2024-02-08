@@ -57,3 +57,4 @@ wasmedge --dir .:. \
 llama/wasmedge-ggml-llama.wasm default
 ```
 5-Test
+![alt text](https://github.com/XuanDu222/LFX-Mentorship-2024-01-Pre-test-3182/blob/main/2-5.png?raw=true)
